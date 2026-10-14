@@ -1,0 +1,172 @@
+/* Final client visual refinement. Shared by both pages; no content or layout rewrite. */
+:root {
+  --ivory:#f7f1e7;
+  --sand:#eae0d1;
+  --cream:#fffaf2;
+  --charcoal:#292725;
+  --charcoal-deep:#1f1e1c;
+  --terracotta:#a8462d;
+  --terracotta-hover:#883720;
+  --tan:#d6b68b;
+  --pale-blue:#e2e9e9;
+  --warm-muted:#6b625a;
+  --warm-line:#cfc2b1;
+  --on-dark:#e0d6c9;
+  /* Existing tokens retained so all components inherit the same palette. */
+  --ink:var(--charcoal); --navy:var(--charcoal); --deep:var(--charcoal-deep);
+  --gold:var(--tan); --paper:var(--ivory); --muted:var(--warm-muted); --line:var(--warm-line);
+}
+body{font-size:clamp(16px,1.12vw,18px);line-height:1.8}
+h1,.hero h1{font-size:clamp(48px,4.7vw,88px);letter-spacing:-.045em;line-height:1.08}
+h2,.section-head h2,.section-copy h2,.developer-intro h2,.contact-section h2{font-size:clamp(40px,3.9vw,66px);letter-spacing:-.035em;line-height:1.12}
+h3{font-size:clamp(27px,2.1vw,34px);line-height:1.2}
+em{color:var(--terracotta)}
+.section{padding-block:clamp(68px,7vw,116px)}
+.eyebrow,.hero-copy .eyebrow,.price-hero .eyebrow{font-size:12px;letter-spacing:1.8px;color:var(--terracotta)}
+.eyebrow.light{color:var(--tan)}
+.fine,.enquiry-form .fine,.offer-body .fine,.contact-grid>div>.fine{font-size:14px;line-height:1.75}
+.lead{font-size:clamp(20px,1.5vw,23px);line-height:1.65}
+.section-head>p{font-size:17px;max-width:390px;line-height:1.75}
+.button,.text-link,.hero .text-link,.unit-copy .button,.contact-buttons .button,.footer-top .text-link{font-size:14px;min-height:48px;line-height:1.5}
+.button{padding:15px 22px}
+.dark{background:var(--charcoal)}.dark:hover{background:var(--terracotta)}
+.gold{background:var(--tan);color:var(--charcoal-deep)}.gold:hover{background:#e8caa4}
+.outline,.text-link{border-color:var(--warm-line)}
+.pale,.light-outline{color:var(--cream);border-color:#95887a}
+:is(button,a,summary,input,select,textarea):focus-visible,.pricing-page :focus-visible{outline:3px solid var(--terracotta);outline-offset:4px}
+.header{background:#f7f1e7f5;border-color:var(--warm-line)}
+.header nav{font-size:14px;gap:18px}.header nav a:hover,.pricing-page nav [aria-current=page]{color:var(--terracotta)}
+.nav-contact{border-color:var(--warm-line);gap:18px}
+.menu-toggle{font-size:15px}
+.brand small{font-size:10px}
+.hero em,.facilities-section h2 em,.contact-section h2 em,.price-contact h2 em{color:var(--tan)}
+.hero-intro,.price-intro{font-size:clamp(18px,1.3vw,20px);color:var(--on-dark);max-width:44ch;line-height:1.75}
+.hero-name{font-size:13px;letter-spacing:2.2px}
+.hero-brochure{font-size:14px;color:var(--on-dark)}
+.hero-bottom{font-size:11px;letter-spacing:.8px;color:var(--on-dark)}
+.hero-bottom strong{font-size:16px}.hero-bottom a{font-size:10px}
+.image-note,.facility-mosaic .image-note{background:#292725d9;font-size:10px;letter-spacing:.7px}
+.hero-stamp{background:#29272555;font-size:13px}
+.picture{background:var(--sand)}.picture-caption{font-size:12px}
+.portrait:after{background:linear-gradient(transparent,#292725cf)}
+.highlights b{font-size:clamp(24px,2vw,30px)}.highlights span{font-size:14px}
+.inline-facts span{font-size:11px;letter-spacing:.7px;background:var(--cream)}
+.location-section{background:var(--pale-blue)}
+.address{font-size:16px;border-color:var(--terracotta)}
+.nearby strong{font-size:36px}.nearby small,.nearby span{font-size:14px}
+.map-card{background:var(--cream);border-color:var(--warm-line)}
+.map-preview{background:var(--pale-blue)}.map-preview>span{background:var(--cream);font-size:15px}
+.map-card>p{font-size:11px;letter-spacing:1px}
+.tabs{gap:8px;border-color:var(--warm-line)}
+.tabs button{font-size:15px;padding:15px 22px}
+.tabs button[aria-selected=true]{color:var(--terracotta);border-color:var(--terracotta);background:var(--sand)}
+.tabs button:hover{background:var(--sand)}
+.unit-copy h3{font-size:clamp(34px,3vw,44px)}
+.unit-copy ul{font-size:16px;line-height:1.85}.unit-copy li:before{color:var(--terracotta)}
+.unit-size{font-size:34px}.unit-size small{font-size:14px;line-height:1.6}
+.unit-feature .expand{font-size:13px;background:#292725d9}
+.facilities-section .section-head>p,.facility-list p,.dark-details,.contact-grid>div>p{color:var(--on-dark)}
+.facility-list>div{border-color:#756a5e}.facility-list span{font-size:13px;color:var(--tan)}
+.facility-list h3{font-size:26px}.facility-list p{font-size:16px;line-height:1.75}
+.facility-caption small{font-size:12px;letter-spacing:1px}.facility-caption b{font-size:30px}
+.dark-details summary{border-color:#756a5e;color:var(--cream)}
+.benefits h3{font-size:27px}.benefits p,.management p,.payment-steps p,.offer-body p,.track-copy p{font-size:16px;line-height:1.8}
+.line-icon,.modal-mini-play{color:var(--terracotta)}
+.rental-card,.offer-section,.gallery-section,.brochure-card{background:var(--sand)}
+.rental-number{background:var(--charcoal)}.rental-number b{color:var(--tan)}
+.rental-number small{font-size:12px;letter-spacing:1px}
+.rental-card h3,.offer-body h3{font-size:clamp(34px,3vw,44px)}
+.management h3,.track-heading h3{font-size:34px}
+.service-chips span{font-size:14px;border-color:var(--warm-line);background:var(--cream)}
+.payment-steps h3{font-size:26px}.payment-steps>div>span{font-size:14px;border-color:var(--warm-line)}
+.tag{font-size:11px;background:var(--cream);letter-spacing:.6px;max-width:calc(100% - 34px)}
+.subtle-link{font-size:14px;padding-block:10px;color:var(--terracotta);border-color:var(--terracotta)}
+.track-copy span{font-size:12px;letter-spacing:1px}
+/* 08 / A CLOSER LOOK: strong active state without changing filtering. */
+.gallery-section .filter-row{gap:10px;border:0;margin:0 0 24px}
+.gallery-section .filter-row button{font-size:16px;font-weight:500;line-height:1.4;letter-spacing:.1px;padding:14px 21px;min-height:52px;border:1px solid #b5a18c;background:var(--cream);color:var(--charcoal);transition:background .2s,color .2s,transform .2s,border-color .2s}
+.gallery-section .filter-row button:hover{background:#f1d9c9;border-color:var(--terracotta);transform:translateY(-2px)}
+.gallery-section .filter-row button[aria-pressed=true]{background:var(--terracotta);border-color:var(--terracotta);color:var(--cream);box-shadow:inset 0 -3px 0 #743322}
+.gallery-section .filter-row button[aria-pressed=true]:hover{background:var(--terracotta-hover)}
+.gallery-tile{background:var(--sand)}.gallery-tile>span{font-size:15px;background:linear-gradient(transparent,#292725ed);padding-top:44px;line-height:1.4}
+.gallery-tile small{font-size:11px;letter-spacing:.5px;margin-top:4px}
+.brochure-card>span{font-size:12px;color:var(--terracotta);letter-spacing:1px}.brochure-card p{font-size:16px}
+summary{font-size:17px}summary span{color:var(--terracotta)}details p,.dark-details p{font-size:16px}
+.doc-row{font-size:15px;border-color:var(--warm-line)}.doc-row small{font-size:13px}.doc-row a{color:var(--terracotta)}
+.video-content>span:last-child{font-size:15px}.video-meta{font-size:11px;letter-spacing:1px}
+.consultant h3{font-size:30px}.consultant div>span{font-size:11px}.consultant div>a{font-size:20px}
+.enquiry-form label{font-size:15px}.enquiry-form input,.enquiry-form select,.enquiry-form textarea{font-size:16px;border-color:var(--warm-line)}
+.enquiry-form h3{font-size:32px}.contact-grid>div>.eyebrow{color:var(--tan)}
+footer{background:var(--charcoal-deep);color:var(--cream)}.footer-top{border-color:#655c52}
+.footer-top>p{font-size:12px;letter-spacing:2px}.footer-bottom{font-size:13px;color:var(--on-dark);gap:30px}
+.footer-bottom p:first-child{flex-shrink:1}
+dialog{border-color:var(--warm-line)}dialog::backdrop{background:#1f1e1ce8}
+.modal-top p,#info-content p,.plan-options a{font-size:16px}.arrow{background:var(--sand)}
+/* Pricing page: same editorial palette, with semantic inventory status colours retained. */
+.price-hero h1{font-size:clamp(48px,5.5vw,84px)}
+.price-back{font-size:14px;color:var(--on-dark)}.pre-sale{border-color:#95887a}
+.price-hero-bottom{font-size:12px;letter-spacing:1px;color:var(--on-dark);border-color:#756a5e}
+.inventory-section{background:var(--sand)}.price-payment{background:var(--pale-blue)}
+.quick-types button{font-size:15px;border-color:var(--warm-line);background:var(--cream)}
+.quick-types button:hover{background:var(--sand)}.quick-types button[aria-pressed=true]{background:var(--terracotta);border-color:var(--terracotta);color:var(--cream)}
+.pricing-page .category-card{background:var(--cream)}.pricing-page .category-card.is-selected{border-color:var(--terracotta);box-shadow:0 0 0 1px var(--terracotta)}
+.listing-image{background:var(--sand)}.listing-image>span{font-size:10px;background:#292725d9}
+.pricing-page .category-price small{font-size:12px}.pricing-page .category-price strong{font-size:clamp(40px,3.4vw,50px)}
+.pricing-page .category-card h3{font-size:28px}.listing-specs{font-size:15px;line-height:1.7}.listing-specs span{white-space:normal}
+.listing-availability{font-size:15px}.listing-actions .button{font-size:14px;gap:12px}.listing-enquire{font-size:15px}
+.price-filters label{font-size:14px}.price-filters select,.price-filters input{font-size:16px;border-color:var(--warm-line);background:var(--cream);height:50px}
+.reset-filter,.inventory-toolbar,.inventory-toolbar button{font-size:14px}.inventory-toolbar button{min-height:44px}
+.floor-group{border-color:var(--warm-line)}.floor-group>summary{font-size:29px}.floor-count{font-size:14px}
+.unit-table thead{background:#e2d5c3;font-size:12px;letter-spacing:.6px}.unit-table td{font-size:16px}.unit-table tbody th{font-size:26px}
+.unit-table td small{font-size:13px}.unit-action a{font-size:13px;display:inline-flex;align-items:center;min-height:44px}
+.status,.unit-table .status{font-size:12px;padding:7px 10px}.pricing-disclaimer{font-size:16px}
+.special-floor summary>span:first-child,.facility-floor>span:first-child{font-size:26px}.special-floor p,.facility-floor p{font-size:16px}
+.special-units li{font-size:14px;background:var(--cream)}
+.price-contact p{color:var(--on-dark)}.price-contact>.wrap>.text-link{font-size:15px}
+.mobile-enquiry:not([hidden]){background:var(--charcoal);border-color:#95887a}
+.mobile-enquiry small{font-size:10px;color:var(--on-dark)}.mobile-enquiry strong{font-size:30px}.mobile-enquiry .button{font-size:15px}
+.price-download{background:var(--terracotta);color:var(--cream);gap:13px}.price-download:hover{background:var(--terracotta-hover)}
+.pdf-label{font-size:11px;letter-spacing:.7px;border:1px solid #ffffff75;padding:2px 5px}
+.price-download-row{display:flex;align-items:center;flex-wrap:wrap;gap:16px 25px}
+/* Earlier navigation collapse leaves room for more legible menu text. */
+@media(min-width:761px) and (max-width:1200px){
+  .header{height:76px}.menu-toggle{display:flex;align-items:center;gap:20px;background:transparent;min-height:48px}
+  .menu-toggle span{font-size:22px}.header nav{display:none;position:absolute;top:76px;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--paper);padding:18px 32px;border-bottom:1px solid var(--line);max-height:calc(100dvh - 76px);overflow:auto;gap:0}
+  .header nav.open{display:flex}.header nav a{padding:12px 0;font-size:17px}.header nav .nav-contact{margin:8px 0;padding:10px 16px}
+}
+@media(max-width:1100px){
+  .section-head{gap:25px}.section-head>p{max-width:340px}
+  .unit-layout{grid-template-columns:1fr}.unit-feature img{height:auto;aspect-ratio:16/9}
+  .overview,.offer-grid,.developer-intro,.contact-grid,.legal-section{gap:35px}
+  .hero h1{font-size:clamp(44px,4.8vw,56px)}
+  .unit-table th,.unit-table td{padding:14px 10px}.unit-table td{font-size:14px}
+  .status,.unit-table .status{font-size:11px}.unit-action a{font-size:12px}
+}
+@media(max-width:760px){
+  body{font-size:16px}.header nav a{font-size:17px}.header nav{max-height:calc(100dvh - 72px)}
+  .hero h1{font-size:clamp(44px,11.7vw,58px)}.hero-copy{padding:48px 24px 34px}.hero-intro{font-size:18px}
+  .hero-name{font-size:12px}.hero-copy .eyebrow{font-size:11px;letter-spacing:1.5px}
+  .section-head>p{font-size:17px;max-width:100%}.highlights span{font-size:13px}
+  .highlights b{font-size:24px}.tabs{display:flex;gap:6px}.tabs button{font-size:14px;padding:12px 15px;flex:1 0 auto}
+  .facility-caption b{font-size:22px}.facility-wide .facility-caption b{font-size:34px}.facility-caption small{font-size:10px}
+  .facility-list h3{font-size:24px}.facility-list p,.benefits p{font-size:15px}
+  .facility-mosaic .image-note{font-size:9px;line-height:1.4;letter-spacing:0}
+  .gallery-section .filter-row{gap:8px}.gallery-section .filter-row button{font-size:15px;padding:12px 15px;min-height:48px}
+  .gallery-tile>span{font-size:13px}.gallery-tile small{font-size:10px}
+  .video-content>strong{font-size:34px}.video-content .eyebrow{font-size:11px}.video-content>span:last-child{font-size:13px}
+  .video-meta{font-size:9px;letter-spacing:.3px}
+  .footer-top .text-link{font-size:13px}.footer-bottom{font-size:13px}
+  .price-hero .eyebrow{font-size:11px;letter-spacing:1px}.price-hero-bottom{font-size:10px;letter-spacing:.5px}
+  .price-intro{font-size:18px}.pricing-page .category-card h3{font-size:28px}
+  .pricing-page .category-price strong{font-size:44px}.quick-types button{font-size:14px}
+  .price-filters select,.price-filters input{font-size:16px;padding-inline:8px}
+  .inventory-toolbar{flex-wrap:wrap;gap:10px}.inventory-toolbar p{max-width:none;font-size:14px}
+  .inventory-toolbar button{font-size:14px}.floor-count{font-size:12px;gap:8px}
+  .unit-table th,.unit-table td{padding:0;font-size:15px}.unit-table tbody th{font-size:28px}
+  .unit-table [data-label]:before{font-size:11px}.unit-table .unit-action a{font-size:13px;line-height:1.5}
+  .unit-table tr{background:var(--cream)}.unit-table .unit-action .fine{font-size:13px}
+  .special-floor summary{flex-wrap:wrap}.special-floor .status{font-size:11px}.special-units li{font-size:13px}
+  .pricing-page:has(.mobile-enquiry:not([hidden])){padding-bottom:calc(125px + env(safe-area-inset-bottom,0px))}
+  .pricing-page :is(a,button,input,select,summary){scroll-margin-bottom:145px}
+  .mobile-enquiry:not([hidden]){padding-inline:16px;gap:12px}.mobile-enquiry small{font-size:10px}.mobile-enquiry .button{padding:14px 19px}
+}
