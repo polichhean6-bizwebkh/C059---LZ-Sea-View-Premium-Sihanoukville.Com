@@ -84,10 +84,11 @@ em{color:var(--terracotta)}
 .track-copy span{font-size:12px;letter-spacing:1px}
 /* 08 / A CLOSER LOOK: strong active state without changing filtering. */
 .gallery-section .filter-row{gap:10px;border:0;margin:0 0 24px}
-.gallery-section .filter-row button{font-size:16px;font-weight:500;line-height:1.4;letter-spacing:.1px;padding:14px 21px;min-height:52px;border:1px solid #b5a18c;background:var(--cream);color:var(--charcoal);transition:background .2s,color .2s,transform .2s,border-color .2s}
-.gallery-section .filter-row button:hover{background:#f1d9c9;border-color:var(--terracotta);transform:translateY(-2px)}
-.gallery-section .filter-row button[aria-pressed=true]{background:var(--terracotta);border-color:var(--terracotta);color:var(--cream);box-shadow:inset 0 -3px 0 #743322}
-.gallery-section .filter-row button[aria-pressed=true]:hover{background:var(--terracotta-hover)}
+.gallery-section .filter-row button{font-size:16px;font-weight:500;line-height:1.4;letter-spacing:.1px;padding:14px 21px;min-height:52px;border:1px solid #f5c542;background:#f5c542;color:#252525;transition:border-color .2s,box-shadow .2s}
+/* Exactly two backgrounds; the existing aria-pressed state controls selection. */
+.gallery-section .filter-row button:hover{border-color:currentColor;transform:none}
+.gallery-section .filter-row button[aria-pressed=true]{background:#b64a35;border-color:#b64a35;color:#fff;box-shadow:inset 0 -3px 0 currentColor}
+.gallery-section .filter-row button:focus-visible{outline:3px solid var(--charcoal);outline-offset:4px}
 .gallery-tile{background:var(--sand)}.gallery-tile>span{font-size:15px;background:linear-gradient(transparent,#292725ed);padding-top:44px;line-height:1.4}
 .gallery-tile small{font-size:11px;letter-spacing:.5px;margin-top:4px}
 .brochure-card>span{font-size:12px;color:var(--terracotta);letter-spacing:1px}.brochure-card p{font-size:16px}
